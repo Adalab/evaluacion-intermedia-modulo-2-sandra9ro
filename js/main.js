@@ -45,7 +45,6 @@ const countShotsNumber = function(){
   shotField.value = 'Número de intentos: ' + tries;
 }
 
-
 // Listening to button
  
 const handleButton = function() {
