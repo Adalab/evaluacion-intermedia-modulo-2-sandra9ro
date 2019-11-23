@@ -36,9 +36,6 @@ body {
   padding: 10px;
   display: block;
   width: 100%;
-  justify-self: center;
-  align-self: center;
-  max-width: 600px;  
 }
 
 .button {
