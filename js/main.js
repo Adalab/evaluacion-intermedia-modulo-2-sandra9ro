@@ -20,35 +20,33 @@ console.log("El número aleatorio es:" + randomNumber);
 const compareNumber = function() {
   const numberFieldValue = parseInt(numField.value);
   if (numberFieldValue < 1 || numberFieldValue > 100) {
-    clueFieldValue('Debes introducir un número entre 1 y 100');
+    clueField.innerHTML = "Debes introducir un número entre 1 y 100";
   } else if (numberFieldValue === randomNumber) {
-    clueFieldValue('¡¡¡Enhorabuena, has acertado el número secreto!!!');
+    clueField.innerHTML = "¡¡¡Enhorabuena, has acertado el número secreto!!!";
   } else if (numberFieldValue < randomNumber) {
-    clueFieldValue('Tu número es muy bajo');
+    clueField.innerHTML = "Tu número es muy bajo";
   } else if (numberFieldValue > randomNumber) {
-    clueFieldValue('Tu número es muy alto');
-  // } else {
-  //   clueFieldValue('Debes introducir un número entre 1 y 100');
+    clueField.innerHTML = "Tu número es muy alto";
   }
 };
 
-function clueFieldValue(text) {
-  clueField.value = text;
-}
+// function clueFieldValue(text) {
+//   clueField.value = text;
+// }
 
 // Counting number of shots
 
 let tries = 0;
 
-const countShotsNumber = function(){
-  tries = tries + 1; 
-  shotField.value = 'Número de intentos: ' + tries;
-}
+const countShotsNumber = function() {
+  tries = tries + 1;
+  shotField.innerHTML = tries;
+};
 
 // Listening to button
- 
+
 const handleButton = function() {
- compareNumber();
- countShotsNumber();
+  compareNumber();
+  countShotsNumber();
 };
 button.addEventListener("click", handleButton);
